@@ -102,8 +102,8 @@ ext.copyGoogleServicesFile = { flavorName, flavorId ->
     }
 }
 
-def defaultVersionCode = 102
-def defaultVersionName = "1.4.1"
+def defaultVersionCode = 142
+def defaultVersionName = "1.4.2"
 
 android {
     compileSdk = 35
@@ -140,10 +140,10 @@ android {
 
         buildConfigField "boolean", "USE_ANDROID_LOCALES_FOR_SCREENSHOTS", "false"
 
-        buildConfigField "boolean", "FEATURE_LIST_AS_BASIC_DATATYPE", "false"
+        buildConfigField "boolean", "FEATURE_LIST_AS_BASIC_DATATYPE", "true"
 
         buildConfigField "boolean", "FEATURE_AI_SENSORS_ENABLED", "true"
-        buildConfigField "boolean", "FEATURE_APK_GENERATOR_ENABLED", "false"
+        buildConfigField "boolean", "FEATURE_APK_GENERATOR_ENABLED", "true"
         buildConfigField "boolean", "FEATURE_ARDUINO_ENABLED", "true"
         buildConfigField "boolean", "FEATURE_CAST_ENABLED", "true"
         buildConfigField "boolean", "FEATURE_EMBROIDERY_ENABLED", "true"
@@ -222,7 +222,7 @@ android {
         debug {
             buildConfigField "boolean", "USE_ANDROID_LOCALES_FOR_SCREENSHOTS", useAndroidLocales()
             resValue "string", "DEBUG_MODE", "true"
-            buildConfigField "boolean", "FEATURE_AI_ASSIST_ENABLED", "false"
+            buildConfigField "boolean", "FEATURE_AI_ASSIST_ENABLED", "true"
             signingConfig = signingConfigs.debug
             enableAndroidTestCoverage = true
         }
